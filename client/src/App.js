@@ -11,13 +11,15 @@ import Home from "./pages/Home";
 function App() {
   return (
     <Router>
-    <NavBar/>
-      <Switch>
-        <Route path="/search/:id" component={Details} />
-        <Route path="/search" component={Search} />
-        <Route path="/saved" component={Saved} />
-        <Route path="/" component={Home} />
-      </Switch>
+      <NavBar/>
+      <div className="container">
+        <Switch>
+          <Route path="/search/:id" component={Details} />
+          <Route path="/search" component={Search} />
+          <Route path="/saved" component={Saved} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
     </Router>
   );
 }
