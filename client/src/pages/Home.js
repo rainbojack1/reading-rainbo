@@ -19,14 +19,13 @@ class Home extends Component {
             })
             .catch(err => {
                 console.log(err);
-            })
-    }   
+            });
+    };   
 
     render() {
         return (
             <div>
                 <h1 className="mb-2">All Books</h1>
-
                 {this.state.books.map((book, i) => (
                     <Card
                         id={book._id}

@@ -21,8 +21,8 @@ function Card(props) {
                     </div>
                     <div className="col-md-10 pr-2">
                         <p className="card-text">{props.description}</p>
-                        <a href={props.link} target="_blank" className="card-link">
-                            <i class="fas fa-external-link-alt"></i> Link to Book</a>
+                        <a href={props.link} target="_blank" rel="noopener noreferrer" className="card-link">
+                            <i className="fas fa-external-link-alt"></i> Link to Book</a>
                     </div>
                     
                 </div>
