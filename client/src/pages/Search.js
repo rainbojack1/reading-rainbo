@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Card from '../components/Card';
+// import Card from '../components/Card';
 import API from '../utils/API';
+import Results from '../components/Results';
 
 class Home extends Component {
     state = {
@@ -34,11 +35,17 @@ class Home extends Component {
     };
 
     render() {
+        let res;
+
+        if(this.state.books.length > 0){
+            res = <Results books={this.state.books}></Results>
+        }
+
         return (
             <div>
-                <h1 className="mb-2">Search for a Book</h1>
+                <h1 className="my-2">Search for a Book</h1>
 
-                <div className="row">
+                <div className="row my-5">
                     <div className="col-md-6">
                         <h3>Search by title:</h3>
                         <form>
@@ -87,17 +94,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <h3>Results:</h3>
-                    {/* {this.state.books.map((book, i) => (
-                    <Card
-                        id={book._id}
-                        title={book.title}
-                        authors={book.authors}
-                        description={book.description}
-                        image={book.image}
-                        link={book.link}
-                    />
-                ))} */}
+                    {res}
                 </div>
             </div>
         );

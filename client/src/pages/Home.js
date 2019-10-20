@@ -14,7 +14,7 @@ class Home extends Component {
     getAllBooks = () => {
         axios.get("/api/books")
             .then(books => {
-                console.log(books.data);
+                // console.log(books.data);
                 this.setState({books: books.data})
             })
             .catch(err => {
@@ -25,8 +25,8 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <h1 className="mb-2">All Books</h1>
-                {this.state.books.map((book, i) => (
+                <h1 className="my-2">All Books</h1>
+                {this.state.books.map((book) => (
                     <Card
                         id={book._id}
                         title={book.title}

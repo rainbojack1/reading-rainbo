@@ -4,7 +4,7 @@ import "../App.css";
 
 function Card(props) {
     return (
-        <div className="card">
+        <div className="card my-2">
             <div className="card-body">
                 <div className="row">
                     <div className="col-md-6">
